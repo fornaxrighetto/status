@@ -15,7 +15,7 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.velocity.VelocityEngineUtils;
 
-import br.com.fornax.corporativo.status.model.Rede;
+import br.com.fornax.corporativo.status.model.Maquina;
 import br.com.fornax.corporativo.status.service.MailService;
 import br.com.fornax.corporativo.status.util.DateFormat;
 
@@ -33,12 +33,12 @@ public class MailServiceImpl implements MailService{
 	
 	private String templateEmailVpnOk = "vpnOk.vm";
 	
-	private String destinatario = "fornax@fornax.com.br";
+	private String destinatario = "danilo.righetto@fornax.com.br";
 	
 	
 	@Override
 	@Async
-	public void enviaEmailConexaoFora(final Rede servico) {
+	public void enviaEmailConexaoFora(final Maquina servico) {
 		
 		MimeMessagePreparator preparator = new MimeMessagePreparator() {
             public void prepare(MimeMessage mimeMessage) throws Exception {
@@ -68,7 +68,7 @@ public class MailServiceImpl implements MailService{
 	
 	@Override
 	@Async
-	public void enviaEmailConexaoEstabelecida(final Rede servico) {
+	public void enviaEmailConexaoEstabelecida(final Maquina servico) {
 		
 		MimeMessagePreparator preparator = new MimeMessagePreparator() {
             public void prepare(MimeMessage mimeMessage) throws Exception {

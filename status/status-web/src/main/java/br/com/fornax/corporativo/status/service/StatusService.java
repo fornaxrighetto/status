@@ -1,7 +1,11 @@
 package br.com.fornax.corporativo.status.service;
 
-import br.com.fornax.corporativo.status.model.Rede;
+import java.util.List;
+
+import br.com.fornax.corporativo.status.model.Maquina;
 
 public interface StatusService {
-	Rede statusConexao(String servico);
+	Maquina statusConexao(String servico);
+	
+	public List<Maquina> status();
 }

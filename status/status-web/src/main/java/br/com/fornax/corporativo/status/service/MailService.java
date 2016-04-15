@@ -1,9 +1,9 @@
 package br.com.fornax.corporativo.status.service;
 
-import br.com.fornax.corporativo.status.model.Rede;
+import br.com.fornax.corporativo.status.model.Maquina;
 
 
 public interface MailService {
-	public void enviaEmailConexaoFora(Rede servico);
-	public void enviaEmailConexaoEstabelecida(Rede servico);
+	public void enviaEmailConexaoFora(Maquina servico);
+	public void enviaEmailConexaoEstabelecida(Maquina servico);
 }

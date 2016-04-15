@@ -2,16 +2,51 @@ package br.com.fornax.corporativo.status.model;
 
 import java.util.Calendar;
 
-public class Rede {
+public class Maquina {
+	private long id;
 	private String nome;
+	private String ip;
 	private String status;
 	private String url;
 	private Calendar dataInicio;
 	private Calendar dataFim;
+	private Calendar dataCadastro;
 	private Boolean started = false;
+	private Boolean enviarEmail;
 	private long tempoDeConexao;
 	private int qtdErros;
-	private Boolean enviarEmail;
+	
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getIp() {
+		return ip;
+	}
+
+	public void setIp(String ip) {
+		this.ip = ip;
+	}
+
+	public Calendar getDataCadastro() {
+		return dataCadastro;
+	}
+
+	public void setDataCadastro(Calendar dataCadastro) {
+		this.dataCadastro = dataCadastro;
+	}
+
+	public Boolean getEnviarEmail() {
+		return enviarEmail;
+	}
+
+	public void setEnviarEmail(Boolean enviaEmail) {
+		this.enviarEmail = enviaEmail;
+	}
 
 	public String getNome() {
 		return nome;
@@ -77,11 +112,4 @@ public class Rede {
 		this.qtdErros = qtdErros;
 	}
 
-	public Boolean getEnviarEmail() {
-		return enviarEmail;
-	}
-
-	public void setEnviarEmail(Boolean enviarEmail) {
-		this.enviarEmail = enviarEmail;
-	}
 }
