@@ -287,4 +287,9 @@ public class MaquinaServiceImpl implements MaquinaService{
 			return maquinaResult;
 		}
 
+		@Override
+		public void deletarMaquinaPorId(long idMaquina) {
+			MaquinaEntity entity = maquinaDAO.buscarMaquinaPorId(idMaquina);
+			maquinaDAO.deletarMaquinaPorId(entity);
+		}
 }

@@ -23,6 +23,7 @@
 						<td class="text-center hidden-xs hidden-sm"><span
 							style="font-weight: bold;">URL</span></td>
 						<td class="text-center"><span style="font-weight: bold;">Editar</span></td>
+						<td class="text-center"><span style="font-weight: bold;">Deletar</span></td>
 					</tr>
 				</thead>
 				<tbody>
@@ -38,6 +39,8 @@
 									<td class="text-center hidden-xs hidden-sm">${maquina.url}</td>
 									<td class="text-center"><a href="editar/${maquina.id}"><span
 											class="glyphicon glyphicon-pencil"></span></a></td>
+											<td class="text-center"><a href="deletar/${maquina.id}"><span
+											class="glyphicon glyphicon-trash"></span></a></td>
 								</tr>
 							</c:forEach>
 						</c:when>

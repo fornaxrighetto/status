@@ -42,12 +42,12 @@ function Pesquisa(){
 
 		<!-- /.container -->
 	</nav>
-		<div class="navbar-form navbar-center" role="search" style="margin-left: 30%;">
+		<div class="navbar-form navbar-center" role="search" style="margin-left: 44%;">
 			<div class="form-group">
 			<a href='<c:url value="/listar"></c:url>'
 			<button type="button" href class="btn btn-default" style="background-color: #333; color: #fff; border-color: #333">Listar Maquinas</button></a>
-				<input type="text" id="pesquisarMaquina" class="form-control" placeholder="Pesquisar Maquina">
+				<input type="text" id="pesquisarMaquina" class="form-control hidden-xs hidden-sm" placeholder="Pesquisar Maquina">
 			</div>
-			<button type="button" onclick="" class="btn btn-default">Pesquisar</button>
+			<button type="button" onclick="" class="btn btn-default hidden-xs hidden-sm">Pesquisar</button>
 		</div>
 		

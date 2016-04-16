@@ -9,7 +9,9 @@
 <title>Sistema Status</title>
 <script type="text/javascript">
 $(document).ready(function() {
+	
 	setTimeout('location.reload();', 60000);
+	
 });
 </script>
 </head>
@@ -60,8 +62,10 @@ $(document).ready(function() {
 				</c:choose>
 			</div>
 		</div>
+		<br /><br />
 		<!-- Maquinas Cadastradas no Banco - INICIO -->
 		<c:forEach items="${maquinas}" var="maquina">
+		<br /><br />
 			<div class="row-fluid">
 			<div style="float: left; margin-left: 10%">
 				<img id="internet" src="/status/resources/images/internet.jpg"

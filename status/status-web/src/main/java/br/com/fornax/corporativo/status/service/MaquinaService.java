@@ -22,4 +22,6 @@ public interface MaquinaService {
 	void setMaquina(List<Maquina> maquina);
 	
 	public Maquina buscarMaquinaPorId(long id);
+
+	public void deletarMaquinaPorId(long idMaquina);
 }

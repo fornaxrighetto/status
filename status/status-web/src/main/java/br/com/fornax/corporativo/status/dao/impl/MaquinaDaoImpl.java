@@ -53,4 +53,10 @@ public class MaquinaDaoImpl implements MaquinaDAO {
 		return null;
 	}
 
+	@Override
+	public void deletarMaquinaPorId(MaquinaEntity maquina) {
+		em.remove(maquina);
+		
+	}
+
 }

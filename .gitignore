@@ -1,0 +1,4 @@
+/status/status-web/target/*
+/status/status-web/target/
+/status/status-web/.classpath
+/status/status-web/.settings

@@ -40,6 +40,8 @@ public class MaquinaController {
 	@RequestMapping("/salvarMaquina")
 	public String salvarMaquina(Maquina maquina) {
 		maquinaService.cadastrar(maquina);
+		pesquisaBanco = true;
+		pesquisarBanco();
 		return "redirect:/";
 	}
 	
@@ -48,9 +50,7 @@ public class MaquinaController {
 		return "cadastroMaquina";
 	}
 	
-	@RequestMapping("/")
-	public ModelAndView index() {
-		
+	public void pesquisarBanco(){
 		while(pesquisaBanco){
 			List<Maquina> m = new ArrayList<Maquina>();
 			m = maquinaService.listarMaquinas();
@@ -61,6 +61,11 @@ public class MaquinaController {
 			maquinaService.setMaquina(m);
 			pesquisaBanco = false;
 		}
+	}
+	
+	@RequestMapping("/")
+	public ModelAndView index() {
+		pesquisarBanco();
 		
 		ModelAndView mav = new ModelAndView();
 		Maquina portoNt770 = maquinaService.statusConexao("PORTO - NT770");
@@ -104,7 +109,18 @@ public class MaquinaController {
 	@RequestMapping(value="editarMaquina", method=RequestMethod.POST)
 	public String editarMaquina(Maquina maquina){
 		maquinaService.editar(maquina);
+		pesquisaBanco = true;
+		pesquisarBanco();
 		return "redirect:/";
+	}
+	
+	@RequestMapping(value="deletar/{idMaquina}")
+	public ModelAndView formDeletar(@PathVariable("idMaquina") long idMaquina){
+		mav.clear();
+		maquinaService.deletarMaquinaPorId(idMaquina);
+		mav.setViewName("listarMaquina");
+		mav.addObject("maquinas", maquinaService.status());
+		return mav;
 	}
 	
 //	@RequestMapping("/cadastro")
