@@ -25,7 +25,7 @@
 
 <script type="text/javascript">
 function Pesquisa(){
-	location.href+= "pesquisarMaquina/" + $("#pesquisarMaquina").val();
+	location.href= '<c:url value="/"></c:url>' + "pesquisarMaquina/" + $("#pesquisarMaquina").val();
 }
 </script>
 </head>
@@ -48,6 +48,6 @@ function Pesquisa(){
 			<button type="button" href class="btn btn-default" style="background-color: #333; color: #fff; border-color: #333">Listar Maquinas</button></a>
 				<input type="text" id="pesquisarMaquina" class="form-control hidden-xs hidden-sm" placeholder="Pesquisar Maquina">
 			</div>
-			<button type="button" onclick="" class="btn btn-default hidden-xs hidden-sm">Pesquisar</button>
+			<button type="button" onclick="Pesquisa();" class="btn btn-default hidden-xs hidden-sm">Pesquisar</button>
 		</div>
 		

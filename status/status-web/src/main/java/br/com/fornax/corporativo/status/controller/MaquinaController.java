@@ -123,6 +123,14 @@ public class MaquinaController {
 		return mav;
 	}
 	
+	@RequestMapping(value="pesquisarMaquina/{maquina}")
+	public ModelAndView formPing(@PathVariable("maquina") String maquina){
+		mav.clear();
+		mav.setViewName("ping");
+		mav.addObject("maquina", maquina);
+		return mav;
+	}
+	
 //	@RequestMapping("/cadastro")
 //	public ModelAndView formCadastro(){
 //		mav.clear();

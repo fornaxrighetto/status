@@ -28,4 +28,9 @@
 	<definition name="editarMaquina" extends="main">
 		<put-attribute name="conteudo" value="/pages/editar.jsp" />
 	</definition>
+	
+	<!-- Status - Ping -->
+	<definition name="ping" extends="main">
+		<put-attribute name="conteudo" value="/pages/ping.jsp" />
+	</definition>
 </tiles-definitions>
