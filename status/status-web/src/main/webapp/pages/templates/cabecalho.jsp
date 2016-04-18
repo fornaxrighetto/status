@@ -24,30 +24,45 @@
 <script src="/status/resources/js/bootstrap.min.js"></script>
 
 <script type="text/javascript">
-function Pesquisa(){
-	location.href= '<c:url value="/"></c:url>' + "pesquisarMaquina/" + $("#pesquisarMaquina").val();
-}
+	function Pesquisa() {
+		location.href = '<c:url value="/"></c:url>' + "pesquisarMaquina/"
+				+ $("#pesquisarMaquina").val();
+	}
 </script>
 </head>
 <body>
-	<!-- Navigation -->
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<div class="container">
-			<div class="navbar-header" style="margin-left: 44%;">
-				<a class="navbar-brand" href="/status"
-					style="color: #FFFFFF; font-family: verdana; font-size: 20px;">Sistema
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" style="color: #FFFFFF;" href='<c:url value="/"></c:url>'>Sistema
 					Status</a>
 			</div>
-		</div>
 
-		<!-- /.container -->
-	</nav>
-		<div class="navbar-form navbar-center" role="search" style="margin-left: 44%;">
-			<div class="form-group">
-			<a href='<c:url value="/listar"></c:url>'
-			<button type="button" href class="btn btn-default" style="background-color: #333; color: #fff; border-color: #333">Listar Maquinas</button></a>
-				<input type="text" id="pesquisarMaquina" class="form-control hidden-xs hidden-sm" placeholder="Pesquisar Maquina">
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a style="font-size: 18px; color: #FFFFFF;" href='<c:url value="/listar"></c:url>'>Listar Maquinas <span class="sr-only">(current)</span></a></li>
+				</ul>
+			
+			<form class="navbar-form navbar-left" role="search">
+				<div class="form-group">
+					<input type="text" id="pesquisarMaquina" class="form-control"
+						placeholder="Digite a maquina ...">
+				</div>
+				<button type="button" onclick="Pesquisa();" class="btn btn-default">Pesquisar</button>
+			</form>
 			</div>
-			<button type="button" onclick="Pesquisa();" class="btn btn-default hidden-xs hidden-sm">Pesquisar</button>
 		</div>
-		
+		<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
