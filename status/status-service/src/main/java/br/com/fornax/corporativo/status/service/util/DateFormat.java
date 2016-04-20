@@ -1,4 +1,4 @@
-package br.com.fornax.corporativo.status.util;
+package br.com.fornax.corporativo.status.service.util;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

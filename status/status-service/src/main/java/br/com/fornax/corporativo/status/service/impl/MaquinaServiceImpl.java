@@ -6,12 +6,21 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import javax.inject.Inject;
+import javax.transaction.Transactional;
+
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Service;
+
+import br.com.fornax.corporativo.status.dao.MaquinaDAO;
+import br.com.fornax.corporativo.status.dao.entity.MaquinaEntity;
+import br.com.fornax.corporativo.status.model.Maquina;
 import br.com.fornax.corporativo.status.service.MailService;
 import br.com.fornax.corporativo.status.service.MaquinaService;
 import br.com.fornax.corporativo.status.service.ParseService;
 
 @Service
-@Transactional(propagation = Propagation.REQUIRED)
+@Transactional
 public class MaquinaServiceImpl implements MaquinaService{
 	
 	//Declaração de Maquinas

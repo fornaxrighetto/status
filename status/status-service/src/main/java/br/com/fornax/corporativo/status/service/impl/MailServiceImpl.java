@@ -17,7 +17,7 @@ import org.springframework.ui.velocity.VelocityEngineUtils;
 
 import br.com.fornax.corporativo.status.model.Maquina;
 import br.com.fornax.corporativo.status.service.MailService;
-import br.com.fornax.corporativo.status.util.DateFormat;
+import br.com.fornax.corporativo.status.service.util.DateFormat;
 
 @Service
 public class MailServiceImpl implements MailService{
