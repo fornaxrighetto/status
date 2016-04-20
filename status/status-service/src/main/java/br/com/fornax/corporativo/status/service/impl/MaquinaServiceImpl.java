@@ -7,7 +7,8 @@ import java.util.Calendar;
 import java.util.List;
 
 import javax.inject.Inject;
-import javax.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.annotation.Propagation;
 
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
@@ -20,7 +21,7 @@ import br.com.fornax.corporativo.status.service.MaquinaService;
 import br.com.fornax.corporativo.status.service.ParseService;
 
 @Service
-@Transactional
+@Transactional(propagation = Propagation.REQUIRED)
 public class MaquinaServiceImpl implements MaquinaService{
 	
 	//Declaração de Maquinas

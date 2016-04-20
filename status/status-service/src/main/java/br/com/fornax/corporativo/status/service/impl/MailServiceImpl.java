@@ -33,8 +33,8 @@ public class MailServiceImpl implements MailService{
 	
 	private String templateEmailVpnOk = "vpnOk.vm";
 	
-	private String destinatario = "danilonewtrue@gmail.com";
-	//private String destinatario = "danilo.righetto@fornax.com.br";
+	//private String destinatario = "danilonewtrue@gmail.com";
+	private String destinatario = "danilo.righetto@fornax.com.br";
 	
 	
 	@Override
