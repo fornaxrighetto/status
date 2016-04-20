@@ -299,5 +299,8 @@
 	</build>
   <modules>
   	<module>status-web</module>
+  	<module>status-dao</module>
+  	<module>status-model</module>
+  	<module>status-service</module>
   </modules>
 </project>

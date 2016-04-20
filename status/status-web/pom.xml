@@ -15,6 +15,18 @@
 
 	<dependencies>
 
+		<dependency>
+			<groupId>br.com.fornax.corporativo</groupId>
+			<artifactId>status-model</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>br.com.fornax.corporativo</groupId>
+			<artifactId>status-service</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
 		<!-- velocity -->
 		<dependency>
 			<groupId>org.apache.velocity</groupId>
@@ -31,7 +43,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
-			</dependency>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
